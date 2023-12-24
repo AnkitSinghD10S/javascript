@@ -1,2 +1,2 @@
 # javascript
-learn javascript with the help of min projects
+learn javascript with the help of mini projects
