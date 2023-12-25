@@ -1,5 +1,5 @@
-let firstCard = 10
-let secondCard = 4
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards =[firstCard , secondCard]// arrays of card 
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -11,11 +11,21 @@ console.log(messageEl);
 let sumEl =document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+function getRandomCard(){
+    return 5
+}
+
+// function can be hoisted to the top of the code and ccan be used in any line of the code
 function startGame(){
     renderGame()
 }
+
+
 function renderGame(){
-    cardsEl.textContent= "Cards:" + cards[0] + " " + cards[1]
+    cardsEl.textContent= "Cards:"
+    for(let i=0;i<cards.length;i++){
+        cardsEl.textContent+=cards[i]+"  "
+    }
     sumEl.textContent="sum:" + sum
 if (sum <= 20) {
     
@@ -33,9 +43,11 @@ if (sum <= 20) {
 }
 messageEl.textContent = message;
 }
+
+ 
 function newCard(){
     console.log("Drawing a new card from the deck!")
-    let card = 5
+    let card = getRandomCard()
     sum+=card
     cards.push(card)
     renderGame();
