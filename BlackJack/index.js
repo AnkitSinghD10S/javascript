@@ -10,6 +10,13 @@ console.log(messageEl);
 let sumEl =document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+let player={
+    Name: "Ankit",
+    chips: 145
+}
+let playerEl=document.getElementById("player-el")
+playerEl.textContent = player.Name +"  : $ " +player.chips
+
 function getRandomCard(){
     let randomNumber=Math.floor(Math.random()*13)+1
     if(randomNumber===1){
