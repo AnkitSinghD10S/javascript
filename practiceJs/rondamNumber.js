@@ -51,10 +51,21 @@ Write down all the possible values randomNumber can hold now!
 // let randomNumber = Math.floor( Math.random() * 6 ) + 1
 // console.log(randomNumber)
 
-// Create a function, rollDice(), that returns a random number between 1 and 6
-function rollDice(){
-    let randomNumber = Math.floor(Math.random()*6)+1
-    return randomNumber
-}
-let a=rollDice()
-console.log(a)
+// // Create a function, rollDice(), that returns a random number between 1 and 6
+// function rollDice(){
+//     let randomNumber = Math.floor(Math.random()*6)+1
+//     return randomNumber
+// }
+// let a=rollDice()
+// console.log(a)
+
+
+// let hands = ["rock", "paper", "scissor"]
+
+// // Create a function that returns a random item from the array
+
+// console.log(randomHands())
+// function randomHands(){
+//     let a=Math.floor(Math.random()*3)
+//     return hands[a]
+// }
