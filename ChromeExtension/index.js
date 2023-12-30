@@ -8,13 +8,16 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click",function(){
     myLeads.push(inputEl.value)
 })
-
+let listItems=""
 for(let i=0;i<myLeads.length;i++){
-//    ulEl.innerHTML+="<li>"+myLeads[i]+"</li>"
+//ulEl.innerHTML+="<li>"+myLeads[i]+"</li>"
 // create element
 // set text content
 // append to ul
-    const li =document.createElement("li")
-    li.textContent = myLeads[i]
-    ulEl.append(li)
+// const li =document.createElement("li")
+// li.textContent = myLeads[i]
+// ulEl.append(li)
+    listItems += "<li>"+myLeads[i]+"</li>"
+    // console.log(listItems)
 }
+ulEl.innerHTML = listItems
