@@ -1,10 +1,20 @@
 
-const inputBtn=document.getElementById("input-btn")
-
-inputBtn.addEventListener("click",function(){
-    console.log("button clicked from EventListner")
-})
 // here "click" sepcify the event and the function is define which is to be envoked
 
-let myLeads = []
-const inputEL = document.getElementById("input-el")
+let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
+const inputEl = document.getElementById("input-el")
+const inputBtn=document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+inputBtn.addEventListener("click",function(){
+    myLeads.push(inputEl.value)
+})
+
+for(let i=0;i<myLeads.length;i++){
+//    ulEl.innerHTML+="<li>"+myLeads[i]+"</li>"
+// create element
+// set text content
+// append to ul
+    const li =document.createElement("li")
+    li.textContent = myLeads[i]
+    ulEl.append(li)
+}
