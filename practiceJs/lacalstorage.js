@@ -1,0 +1,1 @@
+localStorage.setItem("Name","ankit")
