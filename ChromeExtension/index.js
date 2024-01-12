@@ -24,7 +24,7 @@ tabBtn.addEventListener("click",function(){
     render(myLeads)
 })
 
-if(leadsFromLocalStorage){
+if(leadsFromLocalStorage){  
     myLeads=leadsFromLocalStorage
     render(myLeads)
 }
