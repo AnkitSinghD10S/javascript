@@ -17,12 +17,22 @@
 // let greeting="hello"
 // greetUser(greeting)
 
-const welcomeEl = document.getElementById("welcome-el")
+// const welcomeEl = document.getElementById("welcome-el")
 
-// Add the ability to choose the emoji as well!
+// // Add the ability to choose the emoji as well!
 
-function greetUser(greeting, name, emoji) {
-    welcomeEl.textContent = `${greeting}, ${name} ${emoji}`
+// function greetUser(greeting, name, emoji) {
+//     welcomeEl.textContent = `${greeting}, ${name} ${emoji}`
+// }
+
+// greetUser("Howdy", "James", "🔥")
+
+
+// Create a function, add(), that adds two numbers together and returns the sum
+
+function add(a,b){
+    return a+b 
 }
 
-greetUser("Howdy", "James", "🔥")
+console.log( add(3, 4)   ) // should log 7
+console.log( add(9, 102) ) // should log 111
