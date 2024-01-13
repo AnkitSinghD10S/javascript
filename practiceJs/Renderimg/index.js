@@ -11,7 +11,7 @@ const imgs = [
 let container =  document.getElementById("container")
 
 function renderImg(){
-    let imgsDOM=""
+let imgsDOM=""
     for(let i=0;i<imgs.length;i++){
         imgsDOM +=`<img class="team-img" src="${imgs[i]}"> `
     }
