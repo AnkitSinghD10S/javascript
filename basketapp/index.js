@@ -10,13 +10,14 @@ const database = getDatabase (app)
 const shoppingListInDB = ref(database , "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
-const shoppingList = document.getElementById("shopping-list")
+const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     push(shoppingListInDB, inputValue)
-    console.log(inputValue)
+    fruits.push(inputValue)
     render(fruits)
+    inputFieldEl.value=""
 })
 
 function render (list){
@@ -26,6 +27,6 @@ function render (list){
         <li> ${list[i]} </li>
         `
     }
-    shoppingList.innerHTML = innerList
+    shoppingListEl.innerHTML = innerList
 }
-let fruits =["oranges", "banana"] 
+let fruits =[] 
