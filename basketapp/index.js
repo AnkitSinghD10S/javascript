@@ -15,12 +15,14 @@ const shoppingListEl = document.getElementById("shopping-list")
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     push(shoppingListInDB, inputValue)
-    fruits.push(inputValue)
-    render(fruits)
-    inputFieldEl.value=""
+    basketList.push(inputValue)
+    appendItemToShoppingList(basketList)
+    clearInputField()
 })
-
-function render (list){
+function clearInputField(){
+    inputFieldEl.value=""
+}
+function appendItemToShoppingList (list){
     let innerList=""
     for(let i=0;i<list.length;i++){
         innerList+=`
@@ -29,4 +31,4 @@ function render (list){
     }
     shoppingListEl.innerHTML = innerList
 }
-let fruits =[] 
+let basketList =[] 
