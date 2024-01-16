@@ -49,5 +49,7 @@ function appendItemToShoppingListEl(item) {
     let itemValue =item[1]
     let newEl = document.createElement("li")
     newEl.textContent = itemValue
+
+    
     shoppingListEl.append(newEl)
 }
