@@ -17,7 +17,7 @@ addButtonEl.addEventListener("click", function() {
     push(shoppingListInDB, inputValue)
     basketList.push(inputValue)
     clearInputField()
-    appendItemToShoppingList(basketList)
+    // appendItemToShoppingList(basketList)
 })
 
 onValue(shoppingListInDB,function (snapshot){
@@ -42,3 +42,4 @@ function appendItemToShoppingList (list){
     shoppingListEl.innerHTML = innerList
 }
 let basketList =[] 
+console.log(basketList)
