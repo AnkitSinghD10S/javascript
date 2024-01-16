@@ -15,15 +15,21 @@ const shoppingListEl = document.getElementById("shopping-list")
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     push(shoppingListInDB, inputValue)
-    basketList.push(inputValue)
+    // basketList.push(inputValue)
     clearInputField()
     // appendItemToShoppingList(basketList)
 })
 
 onValue(shoppingListInDB,function (snapshot){
-    let itemsArray = Object.values(snapshot.val())
+    // let itemsArray = Object.values(snapshot.val())
+    let itemsArray = Object.entries(snapshot.val())
+    // console.log(snapshot.val())
+    clearShoppingListEl()
     for(let i=0;i<itemsArray.length;i++){
-        appendItemToShoppingList (itemsArray)
+        let currentItem = itemsArray[i];
+        let currentItemID = currentItem[0]
+        let currentItemValue = currentItem[1]
+        appendItemToShoppingListEl(currentItemValue)
         // console.log(itemsArray[i])
         }
     })
@@ -32,14 +38,11 @@ onValue(shoppingListInDB,function (snapshot){
 function clearInputField(){
     inputFieldEl.value=""
 }
-function appendItemToShoppingList (list){
-    let innerList=""
-    for(let i=0;i<list.length;i++){
-        innerList+=`
-        <li> ${list[i]} </li>
-        `
-    }
-    shoppingListEl.innerHTML = innerList
+
+function clearShoppingListEl() {
+    shoppingListEl.innerHTML = ""
 }
-let basketList =[] 
-console.log(basketList)
+
+function appendItemToShoppingListEl(itemValue) {
+    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+}
