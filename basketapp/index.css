@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     font-family: 'Rubik', sans-serif;
     background-color: #EEF0F4;
-   
+    color: #432000;
 }
 .container{
     display: flex;
@@ -16,7 +16,7 @@ img{
     margin: 0 auto;
 }
 input {
-    
+    cursor: pointer;
     color: #432000;
     background-color: #DCE1EB;
     padding: 15px;
@@ -40,11 +40,15 @@ button {
 }
 
 ul{ 
+    
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 8px ;
+    color:#432000;
+    font-weight: bold;
+    font-size: large;
 }
 
 ul li{
@@ -56,4 +60,18 @@ ul li{
     flex-grow: 1;
     text-align: center;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+#add-button:hover{
+    background-color: #432000;
+    cursor: pointer;
+}
+
+ul li:hover{
+    background-color: #FFECC7;
+    cursor: pointer;
+}
+input:hover{
+    cursor: pointer;
 }
